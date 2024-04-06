@@ -1,0 +1,41 @@
+{
+  "name": "open-import-statement",
+  "displayName": "Open Import Statement",
+  "description": "Opens a WPILib import statement's documentation",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": ["onCommand:open-import-statement.openImportStatement"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "open-import-statement.openImportStatement",
+      "title": "Open Import Statement"    
+      }
+    ],
+    "keybindings": [
+      {
+          "command": "open-import-statement.openImportStatement",
+          "key": "ctrl+alt+i"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.88.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "eslint": "^8.57.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-cli": "^0.0.8",
+    "@vscode/test-electron": "^2.3.9"
+  }
+}
